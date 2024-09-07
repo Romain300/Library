@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./java.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Library</title>
+</head>
+<body>
+    <div class="title-page">
+        <p>MY LIBRARY</p>
+        <button id="add-book">Add book</button>
+    </div>
+    
+    <dialog>
+        <form method="post">
+            <div>
+                <label for="title">Title</label>
+                <input id="title" autofocus type="text" placeholder="Title">
+            </div>
+            <div>
+                <label for="author">Author</label>
+                <input id="author" type="text" placeholder="Author">
+            </div>
+            <div>
+                <label for="pages">Pages</label>
+                <input id="pages" type="number" min="1">
+            </div>
+            <div>
+                <label for="read">Read</label>
+                <input id="read" type="checkbox">
+            </div>
+        </form>
+
+        <button id="add-book-to-library" type="button">Add book</button>
+        <button id="cancel-button" type="button">Cancel</button>
+    </dialog>
+
+    <div id="container" class="container"></div>
+    
+</body>
+</html>
