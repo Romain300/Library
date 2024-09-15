@@ -11,15 +11,28 @@ const addBookLibraryButton = document.querySelector("#add-book-to-library");
 let removeButtons = document.querySelectorAll(".remove-button");
 const formBook = document.querySelector("form");
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.info = function() {
-        return `${title} by ${author}, ${pages} pages, ${read}`;
-    };
+// function Book(title, author, pages, read) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+//     this.info = function() {
+//         return `${title} by ${author}, ${pages} pages, ${read}`;
+//     };
+// };
+
+class Book {
+    constructor(title, author, pages, read ) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.info = function() {
+            return `${title} by ${author}, ${pages} pages, ${read}`;
+             };    
+    }
 };
+
 
 const theHobbit = new Book("The Hobbit", "J.R.R Tolkien", 295, "not read yet");
 
@@ -136,7 +149,3 @@ addBookLibraryButton.addEventListener("click", () => {
 
 myLibrary.push(theHobbit);
 addBookToLibrary();
-
-
-
-
